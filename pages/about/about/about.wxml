@@ -1,0 +1,9 @@
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于mqttclient</view>
+  <view class='text-content'>
+    <view>Hi！开发者~欢迎使用mqttclient小程序！</view>
+    <view class='margin-top-sm'>该项目是我为mqttclien项目制作的一个小程序，如果你有一些好的想法可以在GitHub里提交给我，或者如果在使用mqttclien中发现了bug，也可以提交给我，感谢你们的支持。</view>
+    <view class='margin-top-sm'>项目是开源的，遵循Apache v2.0协议，不收取任何费用，如果这个项目有帮到你，或者你觉得很赞，可以在GitHub里star或者fork支持一下！</view>
+    <view class='margin-top-sm'>本小程序的UI来自于ColorUI组件库，作者By:文晓港</view>
+  </view>
+</view>

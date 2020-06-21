@@ -1,0 +1,150 @@
+<scroll-view scroll-y class="scrollPage">
+  <image src='/images/wx-mqtt-background.png' mode='widthFix' class='png' style='width:100%;'></image>
+  <view class='nav-list'>
+  
+  </view>
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 智能家居状态
+    </view>
+  </view>
+
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+    <view class="cu-item">
+      <view class="content">
+        <image src="/images/台灯-{{mcStatusData[statusData.tableLamp]}}.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">台灯</text>
+        <view class="action">
+          <text class="text-grey text-sm" style="font-size:20rpx;">台灯已{{mcStatusData[statusData.tableLamp]}}</text>
+        </view>
+      </view>
+      <view class="action">
+          <view wx:if="{{statusData.tableLamp == 1}}" class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-red" style="width:20vw" bindtap="onChangStatus" id="tableLamp" data-value="0">{{mcStatusData[1 - statusData.tableLamp]}}</button>
+          </view>
+          <view wx:else class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-green" style="width:20vw" bindtap="onChangStatus" id="tableLamp" data-value="1">{{mcStatusData[1 - statusData.tableLamp]}}</button>
+          </view>
+      </view>
+    </view>
+    
+    <view class="cu-item">
+      <view class="content">
+        <image src="/images/落地灯-{{mcStatusData[statusData.floorLamp]}}.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">落地灯</text>
+        <view class="action">
+          <text class="text-grey text-sm" style="font-size:20rpx;">落地灯已{{mcStatusData[statusData.floorLamp]}}</text>
+        </view>
+      </view>
+      <view class="action">
+          <view wx:if="{{statusData.floorLamp == 1}}" class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-red" style="width:20vw" bindtap="onChangStatus" id="floorLamp" data-value="0">{{mcStatusData[1 - statusData.floorLamp]}}</button>
+          </view>
+          <view wx:else class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-green" style="width:20vw" bindtap="onChangStatus" id="floorLamp" data-value="1">{{mcStatusData[1 - statusData.floorLamp]}}</button>
+          </view>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <image src="/images/电视-{{mcStatusData[statusData.teleVision]}}.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">电视</text>
+        <view class="action">
+          <text class="text-grey text-sm" style="font-size:20rpx;">电视已{{mcStatusData[statusData.teleVision]}}</text>
+        </view>
+      </view>
+      <view class="action">
+          <view wx:if="{{statusData.teleVision == 1}}" class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-red" style="width:20vw" bindtap="onChangStatus" id="teleVision" data-value="0">{{mcStatusData[1 - statusData.teleVision]}}</button>
+          </view>
+          <view wx:else class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-green" style="width:20vw" bindtap="onChangStatus" id="teleVision" data-value="1">{{mcStatusData[1 - statusData.teleVision]}}</button>
+          </view>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <image src="/images/窗帘-{{mcStatusData[statusData.curtain]}}.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">窗帘</text>
+        <view class="action">
+          <text class="text-grey text-sm" style="font-size:20rpx;">窗帘已{{mcStatusData[statusData.curtain]}}</text>
+        </view>
+      </view>
+      <view class="action">
+          <view wx:if="{{statusData.curtain == 1}}" class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-red" style="width:20vw" bindtap="onChangStatus" id="curtain" data-value="0">{{mcStatusData[1 - statusData.curtain]}}</button>
+          </view>
+          <view wx:else class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-green" style="width:20vw" bindtap="onChangStatus" id="curtain" data-value="1">{{mcStatusData[1 - statusData.curtain]}}</button>
+          </view>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <image src="/images/空调-{{mcStatusData[statusData.airConditioning]}}.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">空调</text>
+        <view class="action">
+          <text class="text-grey text-sm" style="font-size:20rpx;">空调已{{mcStatusData[statusData.airConditioning]}}</text>
+        </view>
+      </view>
+      <view class="action">
+          <view wx:if="{{statusData.airConditioning == 1}}" class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-red" style="width:20vw" bindtap="onChangStatus" id="airConditioning" data-value="0">{{mcStatusData[1 - statusData.airConditioning]}}</button>
+          </view>
+          <view wx:else class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-green" style="width:20vw" bindtap="onChangStatus" id="airConditioning" data-value="1">{{mcStatusData[1 - statusData.airConditioning]}}</button>
+          </view>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="content">
+        <image src="/images/浴缸-{{mcStatusData[statusData.bathtub]}}.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">浴缸</text>
+        <view class="action">
+          <text class="text-grey text-sm" style="font-size:20rpx;">浴缸已{{mcStatusData[statusData.bathtub]}}，当前水温{{statusData.bathtubTemp}}℃</text>
+        </view>
+      </view>
+      <view class="action">
+          <view wx:if="{{statusData.bathtub == 1}}" class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-red" style="width:20vw" bindtap="onChangStatus" id="bathtub" data-value="0">{{mcStatusData[1 - statusData.bathtub]}}</button>
+          </view>
+          <view wx:else class="margin-tb-sm text-center" wx:key>
+            <button class="cu-btn round bg-green" style="width:20vw" bindtap="onChangStatus" id="bathtub" data-value="1">{{mcStatusData[1 - statusData.bathtub]}}</button>
+          </view>
+      </view>
+    </view>
+
+
+<!-- 
+    <view class="cu-item">
+      <view class="content">
+        <image src="/images/台灯-打开.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">台灯</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-sm">台灯已打开</text>
+      </view>
+    </view>
+        
+    <view class="cu-item {{menuArrow?'arrow':''}}">
+      <view class="content">
+        <text class="cuIcon-tagfill text-red"></text>
+        <text class="text-grey">标签</text>
+      </view>
+      <view class="action">
+        <view class="cu-tag round bg-orange light">音乐</view>
+        <view class="cu-tag round bg-olive light">电影</view>
+        <view class="cu-tag round bg-blue light">旅行</view>
+      </view>
+    </view> -->
+
+    
+  </view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view>
+
+

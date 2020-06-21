@@ -1,0 +1,103 @@
+<view class="cu-timeline">
+  <view class="cu-item text-green">
+    <view class="bg-gradual-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.1.0</view>
+        <view class="cu-tag line-white">2020/06/18</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.重构部分代码</view>
+        <view>2.支持多客户端</view>
+        <view>3.支持设置遗嘱</view>
+        <view>4.增加在线代码生成工具与裁剪配置工具</view>
+        <view>5.优化MQTT处理的逻辑，提升整体的稳定性</view>
+        <view>6.优化API接口</view>
+        <view>7.增加多个云平台的测试代码与说明文档</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.4</view>
+        <view class="cu-tag line-white">2020/05/21</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.重新调整了network结构</view>
+        <view>2.修复mbedtls数据通道</view>
+        <view>3.修复当连接服务器时需要关闭的socket</view>
+        <view>4.移除salof中断言日志层次</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.3</view>
+        <view class="cu-tag line-white">2020/04/28</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.避免造成全局污染修改了log、list相关函数的命名</view>
+        <view>3.添加生成动态库的脚本</view>
+        <view>2.支持FreeRTOS平台</view>
+        <view>3.支持RT-Thread平台</view>
+        <view>4.优化publish消息的处理</view>
+        <view>5.修复当记录太多报文时进行重连操作</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.2</view>
+        <view class="cu-tag line-white">2020/04/18</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.添加新特性——拦截器</view>
+        <view>2.优化处理来自服务器publish消息的逻辑</view>
+        <view>3.修复内存溢出的bug</view>
+        <view>4.添加列出已订阅消息的api接口</view>
+        <view>5.优化释放客户端的处理</view>
+        <view>6.优化掉线重连的逻辑处理</view>
+        <view>7.支持TencentOS tiny平台，并完成测试</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.1</view>
+        <view class="cu-tag line-white">2020/03/15</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.修复主动断开连接的处理逻辑</view>
+        <view>2.mqttclien使用Apache v2.0开源协议</view>
+        <view>3.更新salof异步日志库</view>
+        <view>4.修复CMake编译工具链</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.0</view>
+        <view class="cu-tag line-white">2020/02/18</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.初次发布版本，完成基本架构及其稳定性验证</view>
+        <view>2.修复重连时的处理</view>
+        <view>3.融入salof日志框架并修复相关bug</view>
+        <view>4.在Linux平台上开发，抽取MQTT公共部分，做成平台抽象层，为后续平台兼容预留接口</view>
+        <view>5.修复客户端与服务器保活的处理（MQTT心跳）</view>
+        <view>6.添加网络类型nettype，预留TCP直连或者TLS加密传输的处理</view>
+        <view>7.更新network组件层，添加mbedtls加密传输相关的库文件</view>
+        <view>8.添加网络组件抽象层</view>
+        <view>9.添加Linux平台抽象层相关的处理，如内存、线程、互斥锁、socket等</view>
+        <view>10.添加通用处理组件、如list、error、随机数发生器等</view>
+        <view>11.优化掉线重连、报文ID、重发设置DUP标志位等操作（期间不断测试稳定性）</view>
+        <view>12.设计记录机制</view>
+        <view>13.设计整体架构</view>
+      </view>
+    </view>
+  </view>
+</view>
